@@ -1,0 +1,17 @@
+.home {
+  text-align: center;
+}
+
+.col-izq {
+  margin: auto;
+  padding-top: 19%;
+}
+.col-izq > h3 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: green;
+}
+
+.col-der > img {
+  border-radius: 10px;
+}
