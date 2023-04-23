@@ -49,9 +49,9 @@ function Navbar() {
                 </li>
               </ul>
               <div className="btnadmin">
-                <a href="#" className="text-decoration-none text-dark">
+                <Link to="/login" className="text-decoration-none text-dark">
                   Admin
-                </a>
+                </Link>
               </div>
             </div>
           </div>

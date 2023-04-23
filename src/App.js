@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import ConsultaLibros from "./components/ConsultaLibros/ConsultaLibros";
 import SolicitarLibro from "./components/SolicitarLibro/SolicitarLibro";
 import Footer from "./components/Footer/Footer";
+import Login from "./components/LoginAdmin/Login";
 
 function App() {
   return (
@@ -16,6 +17,10 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/consultarlibro" element={<ConsultaLibros />} />
           <Route path="/solicitarlibro" element={<SolicitarLibro />} />
+        </Routes>
+        {/*  */}
+        <Routes>
+          <Route path="/login" element={<Login />}></Route>
         </Routes>
       </Router>
       <Footer />

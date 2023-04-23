@@ -18,7 +18,8 @@ const Home = () => {
           alt="imagen Libro"
         />
       </div>
-      <h5>Continuación del inicio</h5>
+      <h5>Algunos Libros Disponibles</h5>
+      <p>Libros</p>
     </div>
   );
 };

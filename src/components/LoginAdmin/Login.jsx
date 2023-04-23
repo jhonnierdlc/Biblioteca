@@ -1,12 +1,13 @@
 import React from "react";
+import "./Login.css";
 
 function Login() {
   return (
     <div>
       <div className="font">
-        <div className="inicioAdmin">
+        <div className="loginadmin">
           <main role="main" className="container my-auto">
-            <div className="row">
+            <div className="login row">
               <div
                 id="login"
                 className="col-lg-4 offset-lg-4 col-md-6 offset-md-3
@@ -21,7 +22,7 @@ function Login() {
 
                 <form id="formlogin">
                   <div className="form-group">
-                    <label for="usuario">Usuario</label>
+                    <label HtmlFor="usuario">Usuario</label>
                     <input
                       id="usuario"
                       name="usuario"
@@ -31,7 +32,7 @@ function Login() {
                     />
                   </div>
                   <div className="form-group">
-                    <label for="password">Contraseña</label>
+                    <label HtmlFor="password">Contraseña</label>
                     <input
                       id="password"
                       name="password"
@@ -41,9 +42,12 @@ function Login() {
                     />
                   </div>
                   <br />
-                  <button type="submit" className="btn btn-primary mb-2">
-                    Entrar
-                  </button>
+                  <div className="text-center">
+                    <button type="submit" className="btn btn-primary mb-2">
+                      Entrar
+                    </button>
+                  </div>
+
                   <br />
                 </form>
               </div>

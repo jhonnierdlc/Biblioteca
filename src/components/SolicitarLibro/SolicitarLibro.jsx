@@ -3,7 +3,10 @@ import "./SolicitarLibro.css";
 
 const SolicitarLibro = () => {
   return (
-    <div className="solicitarlibro card">
+    <div
+      className="solicitarlibro col-lg-4 offset-lg-4 col-md-6 offset-md-3
+    col-12"
+    >
       <div className="card-header">
         <h5>Solicitar Libro</h5>
       </div>
