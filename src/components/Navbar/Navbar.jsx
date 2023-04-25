@@ -1,8 +1,10 @@
 import React from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
+  const { pathname } = useLocation();
+  if (pathname === "/login") return <div />;
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">

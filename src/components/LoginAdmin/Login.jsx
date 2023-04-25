@@ -1,11 +1,18 @@
 import React from "react";
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
     <div>
       <div className="font">
         <div className="loginadmin">
+          <Link to="/">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/61/61449.png?w=360"
+              alt="img volver a home"
+            />
+          </Link>
           <main role="main" className="container my-auto">
             <div className="login row">
               <div

@@ -22,8 +22,8 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />}></Route>
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </div>
   );
 }

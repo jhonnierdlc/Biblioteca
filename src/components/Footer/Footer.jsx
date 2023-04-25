@@ -1,7 +1,10 @@
 import React from "react";
 import "./Footer.css";
+import { useLocation } from "react-router";
 
 const Footer = () => {
+  const { pathname } = useLocation();
+  if (pathname === "/login") return <div />;
   return (
     <footer className="footer bg-dark">
       <div className="copy text-center text-white p-3">

@@ -7,3 +7,7 @@
   border-radius: 10%;
   margin-bottom: 30px;
 }
+.loginadmin > a > img {
+  width: 40px;
+  margin-left: 40px;
+}
