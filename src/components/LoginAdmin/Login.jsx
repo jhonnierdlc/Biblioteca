@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Login() {
+  const [login, setlogin] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/")
+      .then((response) => setlogin(response.data));
+  }, []);
+
   return (
     <div>
       <div className="font">
@@ -50,7 +59,7 @@ function Login() {
                   </div>
                   <br />
                   <div className="text-center">
-                    <button type="submit" className="btn btn-primary mb-2">
+                    <button type="submit" className="btn btn-dark mb-2">
                       Entrar
                     </button>
                   </div>

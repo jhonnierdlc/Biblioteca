@@ -1,6 +1,14 @@
 .home {
   text-align: center;
 }
+.pantallainicio {
+  background: linear-gradient(
+    276deg,
+    rgba(253, 253, 253, 1) 0%,
+    rgba(205, 255, 185, 1) 100%,
+    rgba(169, 240, 135, 1) 100%
+  );
+}
 
 .col-izq {
   margin: auto;
@@ -14,4 +22,35 @@
 
 .col-der > img {
   border-radius: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .infobiblio {
+    padding-bottom: 30px;
+  }
+}
+/*Parte de algunos libros*/
+
+.algunoslibros .descripcionlib {
+  background-color: aqua;
+  align-items: center;
+}
+
+.containerlib {
+  display: flex;
+  overflow: scroll;
+  padding: 24px;
+  height: 300px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 24px;
+  border-radius: 8px;
+  gap: 12px;
+  margin: 2rem auto;
+  overflow-y: hidden;
+}
+.containerlib .item {
+  flex: 0 0 100%;
+  padding: 24px;
+  border-radius: 8px;
+  scroll-snap-align: start;
 }
