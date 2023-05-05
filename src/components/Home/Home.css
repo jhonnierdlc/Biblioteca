@@ -15,8 +15,6 @@
   padding-top: 19%;
 }
 .col-izq > h3 {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: green;
 }
 
@@ -32,8 +30,10 @@
 /*Parte de algunos libros*/
 
 .algunoslibros .descripcionlib {
-  background-color: aqua;
   align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .containerlib {
