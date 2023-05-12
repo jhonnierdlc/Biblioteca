@@ -1,6 +1,19 @@
-.btnadmin {
-  border: 3px solid red;
-  background-color: white;
-  border-radius: 50%;
-  padding: 4px 4px;
+.botonadmin span {
+  transition: 0.4s ease-in-out all;
+  position: absolute;
+  left: 40%;
+  background-color: antiquewhite;
+}
+
+.botonadmin:hover span {
+  left: 20px;
+}
+
+.botonadmin:hover .icono {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  left: 0px;
+  background-color: yellow;
 }

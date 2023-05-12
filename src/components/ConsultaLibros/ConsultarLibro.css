@@ -4,5 +4,13 @@
   align-items: center;
 }
 
-.card {
+.cardslibros {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 30px;
+  margin-right: 10px;
+}
+.card img {
+  height: 270px;
 }

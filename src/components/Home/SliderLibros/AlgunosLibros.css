@@ -1,0 +1,28 @@
+.libro {
+  display: flex;
+  overflow: scroll;
+  padding: 24px;
+  height: 500px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 24px;
+  border-radius: 8px;
+  gap: 12px;
+  margin: 2rem auto;
+  overflow-y: hidden;
+}
+.libro .item {
+  flex: 0 0 100%;
+  padding: 24px;
+  border-radius: 8px;
+  scroll-snap-align: start;
+}
+.algunoslibros .descripcionlib {
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.libro img {
+  height: 400px;
+}
