@@ -10,7 +10,14 @@
   display: flex;
   margin-bottom: 30px;
   margin-right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .card img {
   height: 270px;
+}
+
+.containerlib > h4 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }

@@ -13,7 +13,7 @@ const ConsultaLibros = ({ libros }) => {
   }, []);
 
   return (
-    <div className="row">
+    <div className="row containerlib">
       <h4>Libros Disponibles</h4>
       <div className="consultalibro text-center card-group ">
         {!libro
