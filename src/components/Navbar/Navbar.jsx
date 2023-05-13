@@ -3,8 +3,10 @@ import "./Navbar.css";
 import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
-  const { pathname } = useLocation();
+  const { pathname, state } = useLocation();
   if (pathname === "/login") return <div />;
+  console.log(state);
+
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -59,6 +61,10 @@ function Navbar() {
                 </Link>
               </div>
             </div>
+          </div>
+          <div className="user">
+            <span className="username">Jhonnier</span>
+            <button className="btn-danger">Cerrar Sesion</button>
           </div>
         </div>
       </nav>

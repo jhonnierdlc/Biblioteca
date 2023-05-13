@@ -1,9 +1,29 @@
 import React, { useEffect, useState } from "react";
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useForm } from "react-hook-form";
 
 function Login() {
+  const navegate = useNavigate();
+
+  const { user, password, onInputChange, onResetForm } = useForm({
+    user: "",
+    password: "",
+  });
+
+  const onLogin = (e) => {
+    e.preventDefault();
+    navegate("/homeAdmin", {
+      replace: true,
+      state: {
+        logged: true,
+        user,
+      },
+    });
+    onResetForm();
+  };
+
   const [login, setlogin] = useState([]);
 
   useEffect(() => {
@@ -36,15 +56,18 @@ function Login() {
                   alt="Img Inicio Sesión"
                 />
 
-                <form id="formlogin">
+                <form id="formlogin" onSubmit={onLogin}>
                   <div className="form-group">
                     <label HtmlFor="usuario">Usuario</label>
                     <input
-                      id="usuario"
-                      name="usuario"
+                      id="user"
+                      name="user"
+                      value={user}
+                      onChange={onInputChange}
                       className="form-control"
                       type="user"
                       placeholder="Usuario"
+                      required
                     />
                   </div>
                   <div className="form-group">
@@ -52,9 +75,11 @@ function Login() {
                     <input
                       id="password"
                       name="password"
+                      onChange={onInputChange}
                       className="form-control"
                       type="password"
                       placeholder="Contraseña"
+                      required
                     />
                   </div>
                   <br />
