@@ -1,19 +1,17 @@
-.botonadmin span {
-  transition: 0.4s ease-in-out all;
-  position: absolute;
-  left: 40%;
-  background-color: antiquewhite;
+.btnadmin {
+  background-color: rgba(169, 240, 135, 1);
+  border: none;
+  color: white;
+  padding: 7px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  border-radius: 5px;
 }
 
-.botonadmin:hover span {
-  left: 20px;
-}
-
-.botonadmin:hover .icono {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  z-index: 2;
-  left: 0px;
-  background-color: yellow;
+.btnadmin:hover {
+  background-color: white; /* Green */
+  color: white;
 }
