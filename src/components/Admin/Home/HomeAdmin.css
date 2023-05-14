@@ -1,0 +1,12 @@
+.imgagregar {
+  width: 200px;
+  background-color: rgb(218, 226, 223);
+  border-radius: 10px;
+}
+.imgrevisar {
+  width: 200px;
+  border-radius: 10px;
+}
+.admin {
+  text-align: center;
+}

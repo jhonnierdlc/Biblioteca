@@ -7,31 +7,32 @@ import { useForm } from "react-hook-form";
 function Login() {
   const navegate = useNavigate();
 
-  const { user, password, onInputChange, onResetForm } = useForm({
-    user: "",
-    password: "",
-  });
+  const { register, handleSubmit } = useForm();
 
-  const onLogin = (e) => {
-    e.preventDefault();
+  const onSubmit = (data) => {
+    console.log(data);
+    onLogin(data);
+  };
+
+  const onLogin = (data) => {
     navegate("/homeAdmin", {
       replace: true,
       state: {
         logged: true,
-        user,
+        user: data.usuario,
       },
     });
-    onResetForm();
   };
-
+  {
+    /* 
   const [login, setlogin] = useState([]);
-
   useEffect(() => {
     axios
       .get("http://localhost:5000/api/")
       .then((response) => setlogin(response.data));
   }, []);
-
+*/
+  }
   return (
     <div>
       <div className="font">
@@ -56,14 +57,13 @@ function Login() {
                   alt="Img Inicio Sesión"
                 />
 
-                <form id="formlogin" onSubmit={onLogin}>
+                <form id="formlogin" onSubmit={handleSubmit(onSubmit)}>
                   <div className="form-group">
                     <label HtmlFor="usuario">Usuario</label>
                     <input
+                      {...register("usuario")}
                       id="user"
-                      name="user"
-                      value={user}
-                      onChange={onInputChange}
+                      name="usuario"
                       className="form-control"
                       type="user"
                       placeholder="Usuario"
@@ -73,9 +73,9 @@ function Login() {
                   <div className="form-group">
                     <label HtmlFor="password">Contraseña</label>
                     <input
+                      {...register("password")}
                       id="password"
                       name="password"
-                      onChange={onInputChange}
                       className="form-control"
                       type="password"
                       placeholder="Contraseña"

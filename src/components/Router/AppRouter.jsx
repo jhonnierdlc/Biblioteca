@@ -7,6 +7,7 @@ import ConsultaLibros from "../ConsultaLibros/ConsultaLibros";
 import SolicitarLibro from "../SolicitarLibro/SolicitarLibro";
 import Login from "../LoginAdmin/Login";
 import HomeAdmin from "../Admin/Home/HomeAdmin";
+import PrivateRouter from "./PrivateRouter";
 
 export const AppRouter = () => {
   return (
