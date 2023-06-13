@@ -1,12 +1,19 @@
-.imgagregar {
-  width: 200px;
-  background-color: rgb(218, 226, 223);
-  border-radius: 10px;
-}
-.imgrevisar {
-  width: 200px;
-  border-radius: 10px;
-}
 .admin {
+  text-align: center;
+  margin: 30px 0 30px 0;
+}
+.card-header {
+  text-align: center;
+}
+.boton-submit {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+form {
   text-align: center;
 }

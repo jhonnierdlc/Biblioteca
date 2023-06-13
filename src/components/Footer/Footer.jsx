@@ -13,7 +13,8 @@ const Footer = () => {
           © 2023 Copyright:{" "}
           <a className="text-white" href="https://unicesar.edu.co/">
             Unicesar.edu
-          </a>
+          </a>{" "}
+          Jhonnierdlc
         </p>
       </div>
     </footer>

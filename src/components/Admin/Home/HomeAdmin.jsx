@@ -3,28 +3,87 @@ import "./HomeAdmin.css";
 
 const HomeAdmin = () => {
   return (
-    <div className="admin">
-      <h3>Bienvenido Admin</h3>
-      <div className="container_admin row col-12">
-        <div className="agregarlibro col-6">
-          <img
-            src="https://cdn.icon-icons.com/icons2/3251/PNG/512/book_add_regular_icon_203945.png"
-            alt="Agrgar Libro"
-            className="imgagregar"
-          />
-          <h6>Agregar Libro</h6>
-        </div>
-        <div className="revisarsolicitudes col-6">
-          <img
-            src="https://img.freepik.com/vector-premium/revisar-informacion-solicitud-empleo-presenta-capacidad-que-empresa-acuerdo-puesto_690577-38.jpg?w=2000"
-            alt="Revisar soli"
-            className="imgrevisar"
-          />
-          <h6>Revisar Solicitudes</h6>
+    <div
+      className="admin col-lg-4 offset-lg-4 col-md-6 offset-md-3
+    col-12"
+    >
+      <div className="card-header">
+        <h4>Agregar Libro</h4>
+      </div>
+
+      <div className="aggLib card-body align-items-center">
+        <div className="form-registro">
+          <form onSubmit={alerta()}>
+            <div className="form-group ">
+              <label>Isbn:</label>
+              <input
+                type="number"
+                name="isbn"
+                id="isbn"
+                required
+                max="9999999999"
+                className="form-control"
+                placeholder="Isbn del libro"
+              />
+            </div>
+            <div className="form-group ">
+              <label> Titulo:</label>
+              <input
+                type="text"
+                name="titulo"
+                id="titulo"
+                minLength="5"
+                maxLength="70"
+                className="form-control"
+                placeholder="Titulo del libro"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label>Categoria:</label>
+              <select name="categoria" id="categoria" className="form-control">
+                <optgroup label="Seleccione">
+                  <option value="Historia">Historia</option>
+                  <option value="Geografia">Geografia</option>
+                  <option value="Matematicas">Matemáticas</option>
+                  <option value="Cosmologia">Cosmologia</option>
+                  <option value="Psicologia">Psicologia</option>
+                  <option value="Sociologia">Sociologia</option>
+                  <option value="Ingenieria">Ingeniería</option>
+                </optgroup>
+              </select>
+            </div>
+            <div className="form-group">
+              <label>Autor:</label>
+              <input
+                className="form-control"
+                type="text"
+                name="autor"
+                id="autor"
+                minLength="4"
+                maxLength="40"
+                placeholder="Anónimo"
+              />
+            </div>
+            <div className="form-group">
+              <label>Descripción</label>
+              <textarea
+                name="descipcion"
+                id="descripcion"
+                className="form-control"
+                placeholder="Descripción de Solicitud del libro"
+                maxLength="300"
+              ></textarea>
+            </div>
+            <input type="submit" className="btn btn-primary" />
+          </form>
         </div>
       </div>
     </div>
   );
+  function alerta() {
+    alert("Libro Guardado Correctamente");
+  }
 };
 
 export default HomeAdmin;

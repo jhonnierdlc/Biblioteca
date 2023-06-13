@@ -36,7 +36,7 @@ function Navbar() {
               </button>
             </div>
           ) : (
-            <div className="container-fluid">
+            <div className="content ">
               <button
                 className="navbar-toggler"
                 type="button"
@@ -51,6 +51,7 @@ function Navbar() {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
+
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="nav navbar-nav mx-auto">
                   <li className="nav-item active">
@@ -69,7 +70,8 @@ function Navbar() {
                     </Link>
                   </li>
                 </ul>
-                <div className="btnadmin btn-danger">
+
+                <div className="btnadmin">
                   <Link
                     to="/login"
                     className="text-decoration-none text-dark botonadmin "

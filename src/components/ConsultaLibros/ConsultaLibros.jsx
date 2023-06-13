@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./ConsultarLibro.css";
 import axios from "axios";
-import Home from "../Home/Home";
 
 const ConsultaLibros = ({ libros }) => {
   const [libro, setlibro] = useState(false);

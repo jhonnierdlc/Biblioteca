@@ -1,10 +1,18 @@
 import React from "react";
-import { Navigate, useLocation } from "react-router";
+import { Navigate, Route, useLocation } from "react-router";
+import AgregarLibro from "../Admin/AgegrarLibro/AgregarLibro";
 
 const PrivateRouter = ({ children }) => {
   const state = useLocation();
 
-  return state?.logged ? children : <Navigate to={"/login"} />;
+  return state?.logged ? (
+    children
+  ) : (
+    <>
+      <Navigate to={"/login"} />
+      <Route path="/registrolibro" element={<AgregarLibro />}></Route>
+    </>
+  );
 };
 
 export default PrivateRouter;

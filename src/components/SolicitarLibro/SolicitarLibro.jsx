@@ -11,18 +11,21 @@ const SolicitarLibro = () => {
         <h5>Solicitar Libro</h5>
       </div>
       <div className="card-body">
-        <form>
+        <form onSubmit={alerta}>
           <div className="form-group">
-            <label htmlFor="titlebook">Titulo</label>
+            <label htmlFor="titlebook">Titulo:</label>
             <input
               type="text"
               className="form-control"
               id="titlebook"
               placeholder="Titulo del Libro"
+              minLength="5"
+              maxLength="70"
+              required
             />
           </div>
           <div className="form-group">
-            <label htmlFor="tipoid">Tipo Id</label>
+            <label htmlFor="tipoid">Tipo Identificación:</label>
             <select name="select" id="tipoid" className="form-control">
               <optgroup label="Seleccione">
                 <option value="cc">Cédula de Ciudadania</option>
@@ -32,27 +35,31 @@ const SolicitarLibro = () => {
             </select>
           </div>
           <div className="form-group">
-            <label htmlFor="idsolicitante">Identificación</label>
+            <label htmlFor="idsolicitante">Identificación:</label>
             <input
-              type="text"
+              type="number"
               className="form-control"
               id="idsolicitante"
               placeholder="Identificación del Solicitante"
+              min="100000"
+              max="9999999999"
+              required
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="fechadevolucion">Fecha Devolución</label>
+            <label htmlFor="fechadevolucion">Fecha Devolución:</label>
             <input type="date" className="form-control" id="fechadevolucion" />
           </div>
 
           <div className="form-group">
-            <label htmlFor="descripcion">Descripción</label>
+            <label htmlFor="descripcion">Descripción:</label>
             <textarea
               name="descipcion"
               id="descripcion"
               className="form-control"
               placeholder="Descripción de Solicitud del libro"
+              maxLength="300"
             ></textarea>
           </div>
 
@@ -61,15 +68,18 @@ const SolicitarLibro = () => {
               type="checkbox"
               className="form-check-input"
               id="exampleCheck1"
+              required
             />
 
             <label className="form-check-label" htmlFor="exampleCheck1">
               Aceptar{" "}
-              <a href="https://unicesar.edu.co/">Terminos y Condiciones</a>
+              <a href="https://unicesar.edu.co/" required>
+                Terminos y Condiciones
+              </a>
             </label>
           </div>
           <div className="boton-submit">
-            <button type="submit" className="btn btn-primary" onClick={alerta}>
+            <button type="submit" className="btn btn-primary">
               Enviar
             </button>
           </div>
@@ -81,6 +91,12 @@ const SolicitarLibro = () => {
 
 function alerta() {
   var titulo = document.getElementById("titlebook").value;
+  var tipoid = document.getElementById("tipoid").value;
+  var id = document.getElementById("idsolicitante").value;
+  var fechadevolucion = document.getElementById("fechadevolucion").value;
+  var descripcion = document.getElementById("descripcion").value;
+  console.log(id);
+  console.log(fechadevolucion);
   window.alert("Solicitud Enviada Correctamente " + titulo);
 }
 
